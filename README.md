@@ -1,4 +1,4 @@
-# Running a node on EIP-4844 devnet-3
+# Running a node (Lighthouse/Geth) on EIP-4844 devnet-3
 
 - [EIP-4844 devnet-3 Spec & Tracker
 ](https://notes.ethereum.org/@timbeiko/4844-devnet-3)
