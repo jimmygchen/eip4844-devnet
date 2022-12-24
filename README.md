@@ -4,6 +4,12 @@
 ](https://notes.ethereum.org/@timbeiko/4844-devnet-3)
 - [Devnet v3 Guide](https://hackmd.io/@inphi/Hk_cLBJFo)
 
+## Run with Docker
+
+```
+docker-compose up -d
+```
+
 ## Install & Run Geth
 
 - Go >= 1.18 installed
