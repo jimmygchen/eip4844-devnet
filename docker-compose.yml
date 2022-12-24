@@ -12,7 +12,7 @@ services:
     ports:
       - '8545:8545'
       - '30303:30303'
-    command: geth.sh
+    command: /usr/local/bin/geth.sh
     volumes:
       - 'geth_data:/db'
       - type: bind
@@ -34,7 +34,7 @@ services:
       - "8000:8000"
       - "9000:9000"
     command: >
-      bn
+      lighthouse bn
       --network eip4844
       --datadir /data
       --execution-jwt /config/jwtsecret
