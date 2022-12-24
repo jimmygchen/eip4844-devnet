@@ -32,7 +32,7 @@ geth --datadir geth_data/ --networkid 1331 --syncmode=full --verbosity 4 --bootn
 git clone git@github.com:sigp/lighthouse.git
 cd lighthouse
 git checkout eip4844
-cargo install --path lighthouse --force --locked --features "withdrawals" --profile "release" 
+cargo install --path lighthouse --force --locked --profile "release" 
 ```
 
 Make sure `lighthouse` is on the `$PATH` (or use full path to binary), and then run from this project's root directory:
