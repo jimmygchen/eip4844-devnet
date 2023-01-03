@@ -1,5 +1,7 @@
 # Running a node (Lighthouse/Geth) on EIP-4844 devnet-3
 
+## References 
+
 - [EIP-4844 devnet-3 Spec & Tracker
 ](https://notes.ethereum.org/@timbeiko/4844-devnet-3)
 - [Devnet v3 Guide](https://hackmd.io/@inphi/Hk_cLBJFo)
@@ -10,7 +12,9 @@
 docker-compose up -d
 ```
 
-## Install & Run Geth
+## Running without Docker
+
+### Install & Run Geth
 
 - Go >= 1.18 installed
 
@@ -29,7 +33,7 @@ geth init  --datadir geth_data/ genesis.json
 geth --datadir geth_data/ --networkid 1331 --syncmode=full --verbosity 4 --bootnodes "enode://fdefa8b36717bd246ce338e952a3b949e608158d06c74c8b9e207439f70bfc63da27b7a4c4161a14722f7d4a256fda9c93a6dd5c26624b6a523dca2cd852ad97@34.121.33.53:30303"
 ```
 
-## Install & Run Lighthouse
+### Install & Run Lighthouse
 
 - [Lighthouse dependencies](https://lighthouse-book.sigmaprime.io/installation-source.html#dependencies) installed
 - [Rust](https://www.rust-lang.org/tools/install) >= 1.65 installed
