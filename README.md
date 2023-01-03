@@ -1,11 +1,5 @@
 # Running a node (Lighthouse/Geth) on EIP-4844 devnet-3
 
-## References 
-
-- [EIP-4844 devnet-3 Spec & Tracker
-](https://notes.ethereum.org/@timbeiko/4844-devnet-3)
-- [Devnet v3 Guide](https://hackmd.io/@inphi/Hk_cLBJFo)
-
 ## Run with Docker
 
 ```
@@ -52,3 +46,9 @@ lighthouse bn --purge-db --network eip4844 --datadir ./lighthouse_data/ --execut
 ```
 
 Credit: @realbigsean
+
+## References 
+
+- [EIP-4844 devnet-3 Spec & Tracker
+](https://notes.ethereum.org/@timbeiko/4844-devnet-3)
+- [Devnet v3 Guide](https://hackmd.io/@inphi/Hk_cLBJFo)
