@@ -43,7 +43,7 @@ services:
       --debug-level debug
       --testnet-dir /config/testnet
       --http
-      --boot-nodes "enr:-Iq4QAw-ZQb0IiosZgDDcK5ehLs1XmwT0BWU1E1W3ZnhlAAwAE3I46dgCsCbeB5QUwcpDmpFfveTfKF7-tiIg0KWGjqGAYXoIfe6gmlkgnY0gmlwhKEjXcqJc2VjcDI1NmsxoQN4HpB2GMFY2MzwO9hGFjqRG47OX4hGDliAG-mJNWkEr4N1ZHCCIyk,enr:-MS4QDPBabaTc8ieXJbi0XmIIwwNODQbUX4vn5EiDn1SJ9RWHr6GwMFOivD2NmFfB8xnX4aKtL13ngbK6RcYUydmCTMJh2F0dG5ldHOIAAAAAAAAAACEZXRoMpDGtzSqUEhEBf__________gmlkgnY0gmlwhLymRc2Jc2VjcDI1NmsxoQJibuRb1qr76OpfSNMxPXjh8ZmSgGIB6vdHiBpgFnKgt4hzeW5jbmV0c4gAAAAAAAAAAIN0Y3CCIyiDdWRwgiMo,enr:-Ly4QPkqu4tkU1g1J6d4SNO0zoSmjcsR3lFBRRmN4vziZfzNZJI4etFAOH86S_CQAwD4OYUFojJxUqVlb1w45kIVp38Bh2F0dG5ldHOIAAAAAAAAAACEZXRoMpDGtzSqUEhEBf__________gmlkgnY0gmlwhJ_f2VGJc2VjcDI1NmsxoQK2YhW-8TXvOoUiBJyGtn0Dg64FZyOXPUNFXMaam6uuq4hzeW5jbmV0cwCDdGNwgiMog3VkcIIjKA"
+      --boot-nodes "enr:-Iq4QJk4WqRkjsX5c2CXtOra6HnxN-BMXnWhmhEQO9Bn9iABTJGdjUOurM7Btj1ouKaFkvTRoju5vz2GPmVON2dffQKGAX53x8JigmlkgnY0gmlwhLKAlv6Jc2VjcDI1NmsxoQK6S-Cii_KmfFdUJL2TANL3ksaKUnNXvTCv1tLwXs0QgIN1ZHCCIyk"
 
     volumes:
       - lighthouse_data:/data
