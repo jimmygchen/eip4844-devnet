@@ -34,7 +34,7 @@ services:
       dockerfile: Dockerfile.lighthouse
     ports:
       - "5052:5052"
-      - "8000:8000"
+      - "5054:5054"
       - 0.0.0.0:${CL_P2P_PORT:-9000}:${CL_P2P_PORT:-9000}/tcp
       - 0.0.0.0:${CL_P2P_PORT:-9000}:${CL_P2P_PORT:-9000}/udp
     command: >
@@ -45,6 +45,9 @@ services:
       --debug-level debug
       --testnet-dir /config/testnet
       --http
+      --http-address 0.0.0.0
+      --metrics
+       --metrics-address 0.0.0.0
       --port ${CL_P2P_PORT:-9000}
       --boot-nodes "enr:-Iq4QJk4WqRkjsX5c2CXtOra6HnxN-BMXnWhmhEQO9Bn9iABTJGdjUOurM7Btj1ouKaFkvTRoju5vz2GPmVON2dffQKGAX53x8JigmlkgnY0gmlwhLKAlv6Jc2VjcDI1NmsxoQK6S-Cii_KmfFdUJL2TANL3ksaKUnNXvTCv1tLwXs0QgIN1ZHCCIyk"
 
