@@ -5,7 +5,13 @@ Docker Compose setup for running a Lighthouse/Geth node on devnet v5. Builds doc
 ## Run with Docker
 
 ```
-docker-compose up -d
+docker-compose up
+```
+
+To rebuild images from latest geth & lighthouse repos:
+
+```
+docker-compose build --no-cache
 ```
 
 ## References 
