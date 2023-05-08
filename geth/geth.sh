@@ -8,6 +8,9 @@ exec geth \
   --syncmode=full \
   --verbosity 4 \
   --authrpc.jwtsecret /config/jwtsecret \
+  --http \
+  --http.addr=0.0.0.0 \
+  --http.vhosts=* \
   --authrpc.vhosts="*" \
   --authrpc.addr=0.0.0.0 \
   --port=${EL_P2P_PORT:-30303} \
