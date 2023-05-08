@@ -11,8 +11,10 @@ services:
       dockerfile: Dockerfile.geth
     ports:
       - '8545:8545'
-      - 0.0.0.0:30303:30303/tcp
-      - 0.0.0.0:30303:30303/udp
+      - 0.0.0.0:${EL_P2P_PORT:-30303}:${EL_P2P_PORT:-30303}/tcp
+      - 0.0.0.0:${EL_P2P_PORT:-30303}:${EL_P2P_PORT:-30303}/udp
+    environment:
+      - EL_P2P_PORT=${EL_P2P_PORT:-30303}
     command: /usr/local/bin/geth.sh
     volumes:
       - 'geth_data:/db'
@@ -33,8 +35,8 @@ services:
     ports:
       - "5052:5052"
       - "8000:8000"
-      - 0.0.0.0:9000:9000/tcp
-      - 0.0.0.0:9000:9000/udp
+      - 0.0.0.0:${CL_P2P_PORT:-9000}:${CL_P2P_PORT:-9000}/tcp
+      - 0.0.0.0:${CL_P2P_PORT:-9000}:${CL_P2P_PORT:-9000}/udp
     command: >
       lighthouse bn
       --datadir /data
@@ -43,6 +45,7 @@ services:
       --debug-level debug
       --testnet-dir /config/testnet
       --http
+      --port ${CL_P2P_PORT:-9000}
       --boot-nodes "enr:-Iq4QJk4WqRkjsX5c2CXtOra6HnxN-BMXnWhmhEQO9Bn9iABTJGdjUOurM7Btj1ouKaFkvTRoju5vz2GPmVON2dffQKGAX53x8JigmlkgnY0gmlwhLKAlv6Jc2VjcDI1NmsxoQK6S-Cii_KmfFdUJL2TANL3ksaKUnNXvTCv1tLwXs0QgIN1ZHCCIyk"
 
     volumes:
