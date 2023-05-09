@@ -14,6 +14,10 @@ To rebuild images from latest geth & lighthouse repos:
 docker-compose build --no-cache
 ```
 
+## How to test
+
+https://hackmd.io/@jimmygchen/H1XUtBIfn
+
 ## References 
 
 - [4844-devnet-5](https://4844-devnet-5.ethpandaops.io/)
