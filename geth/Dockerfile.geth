@@ -1,4 +1,4 @@
-FROM golang:1.19-alpine3.15 as builder
+FROM golang:1.20-alpine3.18 as builder
 
 RUN apk add --no-cache make gcc musl-dev linux-headers git bash
 
@@ -8,7 +8,7 @@ WORKDIR /app
 # ENV CGO_CFLAGS="-O -D__BLST_PORTABLE__"
 ENV CGO_CFLAGS=$CGO_CFLAGS
 
-RUN bash -c "git clone https://github.com/mdehoog/go-ethereum && cd go-ethereum && git checkout eip-4844 && make geth"
+RUN bash -c "git clone https://github.com/MariusVanDerWijden/go-ethereum && cd go-ethereum && git checkout 4844-devnet-6 && make geth"
 
 # Pull Geth into a second stage deploy alpine container
 FROM alpine:3.15
