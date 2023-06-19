@@ -1,6 +1,6 @@
-# Running a node (Lighthouse/Geth) on EIP-4844 devnet-5
+# Running a node (Lighthouse/Geth) on EIP-4844 devnet-6
 
-Docker Compose setup for running a Lighthouse/Geth node on devnet v5. Builds docker images from `eip4844` branches of Lighthouse and Geth.
+Docker Compose setup for running a Lighthouse/Geth node on devnet v6. Builds docker images from EIP-4844 devnet-6 branches of Lighthouse and Geth.
 
 ## Run with Docker
 
