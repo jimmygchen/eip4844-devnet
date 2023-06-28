@@ -37,22 +37,12 @@ services:
       - "5054:5054"
       - 0.0.0.0:${CL_P2P_PORT:-9000}:${CL_P2P_PORT:-9000}/tcp
       - 0.0.0.0:${CL_P2P_PORT:-9000}:${CL_P2P_PORT:-9000}/udp
-    command: >
-      lighthouse bn
-      --datadir /data
-      --execution-jwt /config/jwtsecret
-      --execution-endpoint http://geth:8551
-      --self-limiter=blob_sidecars_by_range:512/10
-      --debug-level debug
-      --testnet-dir /config/testnet
-      --http
-      --http-address 0.0.0.0
-      --metrics
-      --metrics-address 0.0.0.0
-      --port ${CL_P2P_PORT:-9000}
-
+    command: /usr/local/bin/lighthouse.sh
     volumes:
       - lighthouse_data:/data
+      - type: bind
+        source: ./lighthouse/lighthouse.sh
+        target: /usr/local/bin/lighthouse.sh
       - type: bind
         source: ./cl_config
         target: /config/testnet
