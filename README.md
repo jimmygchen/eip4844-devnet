@@ -20,5 +20,5 @@ https://hackmd.io/@jimmygchen/H1XUtBIfn
 
 ## References 
 
-- [4844-devnet76](https://4844-devnet-7.ethpandaops.io/)
+- [4844-devnet7](https://4844-devnet-7.ethpandaops.io/)
 - [Devnet-7 Spec](https://notes.ethereum.org/@parithosh/devnet-7-specs)
