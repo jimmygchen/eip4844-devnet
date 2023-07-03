@@ -1,6 +1,6 @@
 #!/bin/sh
 
-boot_nodes=$(curl -s https://config.4844-devnet-6.ethpandaops.io/api/v1/nodes/inventory | jq '[ .ethereum_pairs[] | .consensus.enr ] | join(",")' | tr -d '"')
+boot_nodes=$(curl -s https://config.4844-devnet-7.ethpandaops.io/api/v1/nodes/inventory | jq '[ .ethereum_pairs[] | .consensus.enr ] | join(",")' | tr -d '"')
 
 exec lighthouse bn \
   --datadir /data \
