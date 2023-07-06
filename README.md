@@ -14,6 +14,24 @@ To rebuild images from the latest geth & lighthouse devnet-7 repos (required if 
 docker-compose build --no-cache
 ```
 
+## Configuration Options
+
+Below are configurations that can be added to the `.env` file in the project directory:
+
+```
+# Overrides the EL P2P port, default 30303
+EL_P2P_PORT=30303
+
+# Overrides the EL log level, default: 3
+EL_LOG_LEVEL=4
+
+# Overrides the CL P2P port, default: 9000
+CL_P2P_PORT=9300
+
+# Overrides the CL log level, default: info
+CL_LOG_LEVEL=debug
+```
+
 ## How to test
 
 https://hackmd.io/@jimmygchen/H1XUtBIfn

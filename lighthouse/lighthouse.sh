@@ -7,7 +7,7 @@ exec lighthouse bn \
   --execution-jwt /config/jwtsecret \
   --execution-endpoint http://geth:8551 \
   --self-limiter=blob_sidecars_by_range:512/10 \
-  --debug-level debug \
+  --debug-level ${CL_LOG_LEVEL:-info} \
   --testnet-dir /config/testnet \
   --http \
   --http-address=0.0.0.0 \
