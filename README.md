@@ -5,13 +5,13 @@ Docker Compose setup for running a Lighthouse/Geth node on devnet v7. Builds doc
 ## Run with Docker
 
 ```
-docker-compose up
+docker-compose up --build
 ```
 
-To rebuild images from the latest geth & lighthouse devnet-7 repos (required if you've previously used this repo to run earlier devnets):
+If you've previously used this repo to run earlier devnets, you'll need to remove old containers and volumes with the below command first:
 
 ```
-docker-compose build --no-cache
+docker-compose rm -v
 ```
 
 ## Configuration Options
