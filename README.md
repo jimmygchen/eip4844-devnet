@@ -30,6 +30,9 @@ CL_P2P_PORT=9300
 
 # Overrides the CL log level, default: info
 CL_LOG_LEVEL=debug
+
+# Add option to checkpoint sync from a remote BN
+CHECKPOINT_SYNC_URL=http://host.docker.internal:5053
 ```
 
 ## How to test
