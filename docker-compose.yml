@@ -32,6 +32,10 @@ services:
     build:
       context: ./lighthouse
       dockerfile: Dockerfile.lighthouse
+    environment:
+      - CL_P2P_PORT=${CL_P2P_PORT:-9000}
+      - CL_LOG_LEVEL=${CL_LOG_LEVEL:-info}
+      - CHECKPOINT_SYNC_URL=${CHECKPOINT_SYNC_URL}
     ports:
       - "5052:5052"
       - "5054:5054"
