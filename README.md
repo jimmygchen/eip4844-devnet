@@ -1,4 +1,4 @@
-# Running a node (Lighthouse/Geth) on EIP-4844 devnet-7
+# Running a node (Lighthouse/Geth) on EIP-4844 devnet-8
 
 Docker Compose setup for running a Lighthouse/Geth node on devnet v7. Builds docker images from EIP-4844 devnet-7 branches of Lighthouse and Geth.
 
@@ -42,4 +42,4 @@ https://hackmd.io/@jimmygchen/H1XUtBIfn
 ## References 
 
 - [4844-devnet7](https://4844-devnet-7.ethpandaops.io/)
-- [Devnet-7 Spec](https://notes.ethereum.org/@parithosh/devnet-7-specs)
+- [Devnet-8 Spec](https://notes.ethereum.org/@ethpandaops/dencun-devnet-8)
