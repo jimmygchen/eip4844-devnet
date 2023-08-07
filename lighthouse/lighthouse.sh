@@ -12,7 +12,7 @@ exec lighthouse bn \
   --datadir /data \
   --execution-jwt /config/jwtsecret \
   --execution-endpoint http://geth:8551 \
-  --self-limiter=blob_sidecars_by_range:512/10 \
+  --self-limiter=blob_sidecars_by_range:256/10 \
   --debug-level ${CL_LOG_LEVEL:-info} \
   --testnet-dir /config/testnet \
   --http \
@@ -20,4 +20,5 @@ exec lighthouse bn \
   --metrics \
   --metrics-address=0.0.0.0 \
   --port ${CL_P2P_PORT:-9000} \
-  --boot-nodes "$boot_nodes" ${checkpoint_sync}
+  --boot-nodes "$boot_nodes" ${checkpoint_sync} \
+  --disable-peer-scoring
