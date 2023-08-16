@@ -37,7 +37,55 @@ CHECKPOINT_SYNC_URL=http://host.docker.internal:5053
 
 ## How to test
 
-https://hackmd.io/@jimmygchen/H1XUtBIfn
+### Request devnet-8 eth
+
+Request some devnet eth from one of the faucets here:
+https://dencun-devnet-8.ethpandaops.io/
+
+### Sending Blobs
+
+#### Nethermind's `SendBlobs`
+
+Nethermind's `SendBlobs` tool can be found [here](https://github.com/NethermindEth/nethermind/tree/feature/send-blobs-tool/src/Nethermind/Nethermind.SendBlobs).
+
+```
+# Usage: docker run ghcr.io/flcl42/send-blobs:latest <rpc_url> <num_of_blobs> <private_key> <receiver-address>
+# Example:
+docker run ghcr.io/flcl42/send-blobs:latest http://localhost:8545 5 0x0000000000000000000000000000000000000000000000000000000000000000 0x000000000000000000000000000000000000f1c1
+```
+
+#### Blob-utils
+
+To build `blob-utils`:
+
+```
+git clone https://github.com/Inphi/blob-utils.git
+cd blob-utils
+go build
+
+# for Mac with Apple M1/M2 chips, build with these flags:
+CGO_CFLAGS="-O -D__BLST_PORTABLE__" CGO_CFLAGS_ALLOW="-O -D__BLST_PORTABLE__" go build
+```
+
+To send a blob, replace `your_private_key` with your private key.
+
+```
+./blob-utils tx --rpc-url http://localhost:8545 \
+    --blob-file <(echo hello) \
+    --to 0x0000000000000000000000000000000000000000 \
+    --private-key <your_private_key> \
+    --gas-limit 210000 \
+    --chain-id 7011893058 \
+    --priority-gas-price 200000000 \
+    --max-fee-per-blob-gas 300000000
+```
+
+### Downloading a blob via Beacon API
+
+```
+# look up by slot
+curl http://localhost:5052/eth/v1/beacon/blob_sidecars/68267 | jq .
+```
 
 ## References 
 
