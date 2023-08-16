@@ -2,11 +2,12 @@
 
 geth init  --datadir /db /config/genesis.json
 
-bootnodes=$(curl -s https://config.4844-devnet-7.ethpandaops.io/api/v1/nodes/inventory | jq -r '[ .ethereum_pairs[] | .execution.enode ] | join(",")'  | tr -d '"')
+bootnodes=$(curl -s https://config.dencun-devnet-8.ethpandaops.io/api/v1/nodes/inventory | jq -r '[ .ethereum_pairs[] | .execution.enode ] | join(",")'  | tr -d '"')
+network_id=$(jq -r '.config.chainId' /config/genesis.json)
 
 exec geth \
   --datadir /db \
-  --networkid 7011893056 \
+  --networkid "$network_id" \
   --syncmode=full \
   --verbosity ${EL_LOG_LEVL:-3} \
   --authrpc.jwtsecret /config/jwtsecret \
