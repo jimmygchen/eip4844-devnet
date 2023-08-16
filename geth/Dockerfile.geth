@@ -8,7 +8,7 @@ WORKDIR /app
 # ENV CGO_CFLAGS="-O -D__BLST_PORTABLE__"
 ENV CGO_CFLAGS=$CGO_CFLAGS
 
-RUN bash -c "git clone https://github.com/MariusVanDerWijden/go-ethereum && cd go-ethereum && git checkout 4844-devnet-6 && make geth"
+RUN bash -c "git clone https://github.com/lightclient/go-ethereum && cd go-ethereum && git checkout devnet-8 && make geth"
 
 # Pull Geth into a second stage deploy alpine container
 FROM alpine:3.15
