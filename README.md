@@ -14,6 +14,8 @@ If you've previously used this repo to run earlier devnets, you'll need to remov
 docker-compose rm -v
 ```
 
+To rebuild the image from the latest commits, run `docker-compose build --no-cache`, then start the containers with `docker-compose up`.
+
 ## Configuration Options
 
 Below are configurations that can be added to the `.env` file in the project directory:
