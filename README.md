@@ -92,4 +92,4 @@ curl http://localhost:5052/eth/v1/beacon/blob_sidecars/68267 | jq .
 ## References 
 
 - [dencun-devnet-8](https://dencun-devnet-8.ethpandaops.io/)
-- [Devnet-8 Spec](https://notes.ethereum.org/@ethpandaops/dencun-devnet-8)
+- [Devnet-9 Spec](https://notes.ethereum.org/@ethpandaops/dencun-devnet-9)
