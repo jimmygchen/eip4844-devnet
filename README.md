@@ -77,7 +77,7 @@ To send a blob, replace `your_private_key` with your private key.
     --to 0x0000000000000000000000000000000000000000 \
     --private-key <your_private_key> \
     --gas-limit 210000 \
-    --chain-id 7011893058 \
+    --chain-id 7011893059 \
     --priority-gas-price 200000000 \
     --max-fee-per-blob-gas 300000000
 ```
