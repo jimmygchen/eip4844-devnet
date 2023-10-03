@@ -2,7 +2,7 @@
 
 geth init  --datadir /db /config/genesis.json
 
-bootnodes=$(curl -s https://config.dencun-devnet-8.ethpandaops.io/api/v1/nodes/inventory | jq -r '[ .ethereum_pairs[] | .execution.enode ] | join(",")'  | tr -d '"')
+bootnodes=$(curl -s https://config.dencun-devnet-9.ethpandaops.io/api/v1/nodes/inventory | jq -r '[ .ethereum_pairs[] | .execution.enode ] | join(",")'  | tr -d '"')
 network_id=$(jq -r '.config.chainId' /config/genesis.json)
 
 exec geth \
