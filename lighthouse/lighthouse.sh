@@ -1,6 +1,6 @@
 #!/bin/sh
 
-boot_nodes=$(curl -s https://config.dencun-devnet-8.ethpandaops.io/api/v1/nodes/inventory | jq '[ .ethereum_pairs[] | .consensus.enr ] | join(",")' | tr -d '"')
+boot_nodes=$(curl -s https://config.dencun-devnet-9.ethpandaops.io/api/v1/nodes/inventory | jq '[ .ethereum_pairs[] | .consensus.enr ] | join(",")' | tr -d '"')
 
 if [ -n "${CHECKPOINT_SYNC_URL}" ]; then
   checkpoint_sync="--checkpoint-sync-url=${CHECKPOINT_SYNC_URL}"
