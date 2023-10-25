@@ -1,6 +1,6 @@
-# Running a node (Lighthouse/Geth) on Dencun devnet-9
+# Running a node (Lighthouse/Geth) on Dencun devnet-10
 
-Docker Compose setup for running a Lighthouse/Geth node on Dencun devnet-9. Builds docker images from Dencun devnet-9 branches of Lighthouse and Geth.
+Docker Compose setup for running a Lighthouse/Geth node on Dencun devnet-10. Builds docker images from Dencun devnet-10 branches of Lighthouse and Geth.
 
 ## Run with Docker
 
@@ -39,10 +39,10 @@ CHECKPOINT_SYNC_URL=http://host.docker.internal:5053
 
 ## How to test
 
-### Request devnet-9 eth
+### Request devnet-10 eth
 
 Request some devnet eth from one of the faucets here:
-https://dencun-devnet-9.ethpandaops.io/
+https://dencun-devnet-10.ethpandaops.io/
 
 ### Sending Blobs
 
@@ -91,5 +91,5 @@ curl http://localhost:5052/eth/v1/beacon/blob_sidecars/68267 | jq .
 
 ## References
 
-- [dencun-devnet-9](https://dencun-devnet-9.ethpandaops.io/)
-- [Devnet-9 Spec](https://notes.ethereum.org/@ethpandaops/dencun-devnet-9)
+- [dencun-devnet-10](https://dencun-devnet-10.ethpandaops.io/)
+- [Devnet-10 Spec](https://notes.ethereum.org/@ethpandaops/dencun-devnet-10)
