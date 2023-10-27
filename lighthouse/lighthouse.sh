@@ -1,7 +1,5 @@
 #!/bin/sh
 
-boot_nodes=$(echo /config/testnet/boot_enr.yaml | jq '. | join(",")' | tr -d '"')
-
 if [ -n "${CHECKPOINT_SYNC_URL}" ]; then
   checkpoint_sync="--checkpoint-sync-url=${CHECKPOINT_SYNC_URL}"
 else
@@ -20,5 +18,5 @@ exec lighthouse bn \
   --metrics \
   --metrics-address=0.0.0.0 \
   --port ${CL_P2P_PORT:-9000} \
-  --boot-nodes "$boot_nodes" ${checkpoint_sync} \
+  ${checkpoint_sync} \
   --disable-peer-scoring
