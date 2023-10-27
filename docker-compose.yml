@@ -27,6 +27,9 @@ services:
       - type: bind
         source: ./geth/genesis.json
         target: /config/genesis.json
+      - type: bind
+        source: ./geth/enodes.list
+        target: /config/enodes.list
 
   lighthouse:
     build:
