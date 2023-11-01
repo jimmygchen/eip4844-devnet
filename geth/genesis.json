@@ -1,6 +1,6 @@
 {
   "config": {
-    "chainId": 7011893060,
+    "chainId": 7011893061,
     "homesteadBlock": 0,
     "eip150Block": 0,
     "eip155Block": 0,
@@ -14,8 +14,8 @@
     "mergeNetsplitBlock": 0,
     "terminalTotalDifficulty": 0,
     "terminalTotalDifficultyPassed": true,
-    "shanghaiTime": 1698051600,
-    "cancunTime": 1698149904
+    "shanghaiTime": 1698751800,
+    "cancunTime": 1698759480
   },
   "alloc": {
     "0x0000000000000000000000000000000000000000": {
@@ -918,5 +918,5 @@
   "nonce": "0x1234",
   "mixhash": "0x0000000000000000000000000000000000000000000000000000000000000000",
   "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-  "timestamp": "1698051540"
+  "timestamp": "1698751740"
 }
