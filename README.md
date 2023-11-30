@@ -1,6 +1,6 @@
-# Running a node (Lighthouse/Geth) on Dencun devnet-11
+# Running a node (Lighthouse/Geth) on Dencun devnet-12
 
-Docker Compose setup for running a Lighthouse/Geth node on Dencun devnet-11. Builds docker images from Dencun devnet-11 branches of Lighthouse and Geth.
+Docker Compose setup for running a Lighthouse/Geth node on Dencun devnet-12. Builds docker images from Dencun devnet-12 branches of Lighthouse and Geth.
 
 ## Run with Docker
 
@@ -39,10 +39,10 @@ CHECKPOINT_SYNC_URL=http://host.docker.internal:5053
 
 ## How to test
 
-### Request devnet-11 eth
+### Request devnet-12 eth
 
 Request some devnet eth from one of the faucets here:
-https://dencun-devnet-11.ethpandaops.io/
+https://dencun-devnet-12.ethpandaops.io/
 
 ### Sending Blobs
 
@@ -77,7 +77,7 @@ To send a blob, replace `your_private_key` with your private key.
     --to 0x0000000000000000000000000000000000000000 \
     --private-key <your_private_key> \
     --gas-limit 210000 \
-    --chain-id 7011893059 \
+    --chain-id 7011893062 \
     --priority-gas-price 200000000 \
     --max-fee-per-blob-gas 300000000
 ```
@@ -91,5 +91,5 @@ curl http://localhost:5052/eth/v1/beacon/blob_sidecars/68267 | jq .
 
 ## References
 
-- [dencun-devnet-11](https://dencun-devnet-11.ethpandaops.io/)
-- [Devnet-11 Spec](https://notes.ethereum.org/@ethpandaops/dencun-devnet-11)
+- [dencun-devnet-12](https://dencun-devnet-12.ethpandaops.io/)
+- [Devnet-12 Spec](https://notes.ethereum.org/@ethpandaops/dencun-devnet-12)
